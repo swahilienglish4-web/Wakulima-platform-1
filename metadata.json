@@ -1,0 +1,6 @@
+{
+  "name": "Wakulima Platform",
+  "description": "Soko na jukwaa la kuunganisha wakulima na wanunuzi wa bidhaa za kilimo na mazao moja kwa moja nchini Afrika, ikiwa na ushauri wa kilimo (Kilimo Tech Africa).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
