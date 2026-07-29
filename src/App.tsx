@@ -4,7 +4,7 @@ import Hero from "./components/Hero";
 import ListingCard from "./components/ListingCard";
 import AddListingModal from "./components/AddListingModal";
 import ChatWindow from "./components/ChatWindow";
-import KilimoAI from "./components/KilimoAI";
+import ComingSoon from "./components/ComingSoon";
 import BrandingModal from "./components/BrandingModal";
 import Vikundi from "./components/Vikundi";
 import UlikuwaUnajua, { InLineFactCard, FARMING_FACTS, Fact } from "./components/UlikuwaUnajua";
@@ -796,7 +796,7 @@ export default function App() {
         {/* AI ADVISOR TAB */}
         {activeTab === "mshauri" && (
           <div className="py-6">
-            <KilimoAI />
+            <ComingSoon/>
           </div>
         )}
 
