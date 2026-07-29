@@ -44,7 +44,7 @@ app.post("/api/gemini/generate", async (req, res) => {
     
     // Call Gemini 3.5 Flash for the agricultural advisory task
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash-lite",
+      model: "gemini-2.5-flash",
       contents: prompt,
       config: {
         systemInstruction: systemInstruction || "Wewe ni mtaalamu wa kilimo (Kilimo Tech Africa Advisor). Jibu maswali ya wakulima na wanunuzi kwa lugha ya Kiswahili safi, yenye adabu na ya kueleweka. Toa ushauri bora wa kisasa kuhusu kilimo, mazao, mbolea, mbegu, soko, na usalama wa chakula barani Afrika."
