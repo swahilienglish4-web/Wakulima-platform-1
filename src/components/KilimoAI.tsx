@@ -140,7 +140,7 @@ export default function KilimoAI() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/gemini/generate", {
+      const response = await fetch("https://wakulima-platform-1-pq01.onrender.com/api/gemini/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: userPrompt }),
