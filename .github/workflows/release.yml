@@ -36,7 +36,19 @@ jobs:
 
       - name: Sync Capacitor
         run: npx cap sync android
+      - name: Decode Keystore
+        run: |
+          mkdir -p android/app/keystore
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/keystore/wakulima-platform.jks
 
+      - name: Create signing.properties
+        run: |
+          cat > android/signing.properties <<EOF
+          storeFile=app/keystore/wakulima-platform.jks
+          storePassword=${{ secrets.KEYSTORE_PASSWORD }}
+          keyAlias=${{ secrets.KEY_ALIAS }}
+          keyPassword=${{ secrets.KEY_PASSWORD }}
+          EOF
       - name: Build Release Bundle
         run: |
           cd android
